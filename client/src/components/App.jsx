@@ -16,6 +16,7 @@ import ActiveListings from './ActiveListings.jsx';
 var getState = require('../../utils/getState.js').getState;
 var dummyData = require('../../../db/dummyData').dummyData;
 var getListings = require('../../../db/getListings').getListings;
+var APIKEY = require('../../../api/index').APIKEY;
 const axios = require('axios')
 
 const HeaderDiv = styled.div`
@@ -80,7 +81,7 @@ class App extends React.Component {
       "headers": {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "mashvisor-api.p.rapidapi.com",
-        "x-rapidapi-key": "f4c0976e51msh26bd0ff84262df6p19a5d5jsna1e0f33fced2",
+        "x-rapidapi-key": APIKEY,
         "useQueryString": true
       }, "params": {
         "zip_code": zip_code,
@@ -113,7 +114,7 @@ class App extends React.Component {
       "headers": {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "mashvisor-api.p.rapidapi.com",
-        "x-rapidapi-key": "f4c0976e51msh26bd0ff84262df6p19a5d5jsna1e0f33fced2",
+        "x-rapidapi-key": APIKEY,
         "useQueryString": true
       }, "params": {
         "zip_code": zip_code,
